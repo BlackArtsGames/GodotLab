@@ -1,7 +1,4 @@
-# BAG-Project1
+# Godot game lab (GGL)
 Black Arts Games first project. 
-<Name still pending>
 
-This looks loke it's going to be really cool!
-
-I'll try to contribute because it's my first time, sorry for making it so dirty.
+This project is for creating mechanics, minigames, etc to learn more about godot and push it's limits. 
