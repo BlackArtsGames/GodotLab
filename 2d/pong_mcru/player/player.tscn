@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://player/player.gd" type="Script" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 50, 300 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -10.0
+margin_top = -50.0
+margin_right = 10.0
+margin_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -9.9375, 50.0625, 5.38903, 49.8972, 16.4465, -0.104645, 5.08759, -49.9949, -9.98322, -49.9437 )
