@@ -19,9 +19,9 @@ func _physics_process(delta):
 	display_timer.text = str(int(timer.time_left))
 
 func _on_Left_body_entered(body):
-	points_P1 = points_P1 +1
+	points_P2 = points_P2 +1
 
 func _on_Right_body_entered(body):
-	points_P2 = points_P2 +1
+	points_P1 = points_P1 +1
 
 

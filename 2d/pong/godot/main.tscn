@@ -96,7 +96,7 @@ position = Vector2( 320, 80 )
 scale = Vector2( 2.875, 3.125 )
 
 [node name="TimerGame" type="Timer" parent="scoreboard"]
-wait_time = 60.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 

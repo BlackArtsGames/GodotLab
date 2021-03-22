@@ -10,12 +10,12 @@ onready var timer = get_node("scoreboard/TimerGame")
 
 func _process(delta):
 	if scoreboard.points_P1 == n:
-		endgame.text = "P1 Looses"
+		endgame.text = "P1 Wins"
 		ball.stop_ball()
 		timer.stop()
 		
 	if scoreboard.points_P2 == n:
-		endgame.text = "P2 Looses"
+		endgame.text = "P2 Wins"
 		ball.stop_ball()
 		timer.stop()
 
@@ -28,7 +28,7 @@ func _on_Right_body_entered(body):
 func _on_TimerGame_timeout():
 	if scoreboard.points_P1 == scoreboard.points_P2:
 		endgame.text = "Draw!"
-	elif scoreboard.points_P1 > scoreboard.points_P2:
-		endgame.text = "P2 Looses"
+	if scoreboard.points_P1 > scoreboard.points_P2:
+		endgame.text = "P1 Wins"
 	else:
-		endgame.text = "P1 Looses"
+		endgame.text = "P2 Wins"
