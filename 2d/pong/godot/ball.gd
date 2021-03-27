@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var MAX_VELOCITY = 300
-var velocity = Vector2.ZERO
+var velocity = Vect	or2.ZERO
 
 
 func _ready():

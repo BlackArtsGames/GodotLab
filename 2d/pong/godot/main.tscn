@@ -109,10 +109,10 @@ position = Vector2( 320, 256 )
 [node name="P1" parent="." instance=ExtResource( 4 )]
 
 [node name="endgame" type="RichTextLabel" parent="."]
-margin_left = 48.0
-margin_top = 152.0
-margin_right = 109.0
-margin_bottom = 182.0
+margin_left = 56.0
+margin_top = 144.0
+margin_right = 117.0
+margin_bottom = 174.0
 rect_scale = Vector2( 9, 9 )
 custom_fonts/mono_font = SubResource( 7 )
 tab_size = 10
