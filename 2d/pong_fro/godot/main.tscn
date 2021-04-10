@@ -119,8 +119,8 @@ tab_size = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="body_entered" from="Walls/Left" to="." method="_on_Left_body_entered"]
 [connection signal="body_entered" from="Walls/Left" to="scoreboard" method="_on_Left_body_entered"]
-[connection signal="body_entered" from="Walls/Right" to="." method="_on_Right_body_entered"]
+[connection signal="body_entered" from="Walls/Left" to="." method="_on_Left_body_entered"]
 [connection signal="body_entered" from="Walls/Right" to="scoreboard" method="_on_Right_body_entered"]
+[connection signal="body_entered" from="Walls/Right" to="." method="_on_Right_body_entered"]
 [connection signal="timeout" from="scoreboard/TimerGame" to="." method="_on_TimerGame_timeout"]
