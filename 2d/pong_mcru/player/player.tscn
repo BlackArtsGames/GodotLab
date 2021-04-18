@@ -16,5 +16,4 @@ __meta__ = {
 }
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PoolVector2Array( -9.9375, 50.0625, 5.38903, 49.8972, 16.4465, -0.104645, 5.08759, -49.9949, -9.98322, -49.9437 )
