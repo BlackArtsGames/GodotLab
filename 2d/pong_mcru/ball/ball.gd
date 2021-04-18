@@ -9,6 +9,12 @@ var velocity = Vector2.ZERO
 
 
 func to_radians(deg):
+	"""
+	Converts angles in degrees to radians
+	
+	:param deg: Integer or floating point angle in degrees.
+	:return: angle in radians.
+	"""
 	return deg * PI / 180
 
 
@@ -40,11 +46,17 @@ func set_direction():
 
 
 func stop_ball():
+	"""
+	Set ball static at the middle of the screen.
+	"""
 	speed = 0
 	position = INITIAL_POSITIION
 
 
 func restart_ball():
+	"""
+	Set ball moving again.
+	"""
 	speed = INITIAL_SPEED
 	set_direction()
 
@@ -59,7 +71,12 @@ func _ready():
 
 
 func _physics_process(delta):
+	"""
+	Makes the ball be a physic object which increases its speed 
+	when it hits any palette.
+	"""
 	var collision_object = move_and_collide(velocity * speed * delta)
+	
 	if collision_object:
 		velocity = velocity.bounce(collision_object.normal)
 		if collision_object.collider.name in ["Player", "Opponent"]:
