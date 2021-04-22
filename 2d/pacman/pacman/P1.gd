@@ -17,6 +17,7 @@ func _process(delta):
 	input_vector.y = Input.get_action_strength("ui_down")  - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 	
-	animationTree.set("parameters/Move/blend_position", input_vector)
-	velocity = velocity.move_toward(input_vector * MAX_SPEED, MAX_ACCELERATION * delta)
-	velocity = move_and_slide(velocity)
+	if input_vector != Vector2.ZERO:
+		animationTree.set("parameters/move/blend_position", input_vector)
+		velocity = velocity.move_toward(input_vector * MAX_SPEED, MAX_ACCELERATION * delta)
+		velocity = move_and_slide(velocity)

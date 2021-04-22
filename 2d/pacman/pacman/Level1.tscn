@@ -5,4 +5,5 @@
 [node name="Level1" type="Node2D"]
 
 [node name="P1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 168.645, 75.3069 )
+position = Vector2( 181.387, 116.365 )
+scale = Vector2( 12.0195, 12.097 )
