@@ -54,27 +54,15 @@ func stop_ball():
 
 
 func restart_ball():
-	"""
-	Set ball moving again.
-	"""
 	speed = INITIAL_SPEED
 	set_direction()
 
 
 func _ready():
-	"""
-	Called when the node enters the scene tree for the first time.
-	Set initial speed with random direction.
-	"""
-	
 	set_direction()
 
 
 func _physics_process(delta):
-	"""
-	Makes the ball be a physic object which increases its speed 
-	when it hits any palette.
-	"""
 	var collision_object = move_and_collide(velocity * speed * delta)
 	
 	if collision_object:

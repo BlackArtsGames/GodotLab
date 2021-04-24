@@ -21,14 +21,8 @@ func get_opponent_direction():
 
 
 func _ready():
-	"""
-	Called when the node enters the scene tree for the first time.
-	"""
 	ball = get_parent().find_node("Ball")
 
 
 func _physics_process(delta):
-	"""
-	Set Opponent movement.
-	"""
 	move_and_slide(Vector2(0, get_opponent_direction()) * speed)
