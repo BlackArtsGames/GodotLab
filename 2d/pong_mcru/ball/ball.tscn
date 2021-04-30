@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ball/ball.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Ball" type="KinematicBody2D" groups=[
+"BallGroup",
+]]
+position = Vector2( 512, 300 )
+script = ExtResource( 2 )
+
+[node name="RectangleV" type="ColorRect" parent="."]
+margin_left = -4.0
+margin_top = -8.0
+margin_right = 4.0
+margin_bottom = 8.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RectangleH" type="ColorRect" parent="RectangleV"]
+margin_left = -4.0
+margin_top = 4.0
+margin_right = 12.0
+margin_bottom = 12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Square" type="ColorRect" parent="RectangleV"]
+visible = false
+margin_left = -2.0
+margin_top = 2.0
+margin_right = 10.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
