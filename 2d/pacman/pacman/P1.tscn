@@ -70,48 +70,49 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 0 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "left"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "right"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "up"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=8]
 animation = "down"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=17]
-blend_point_0/node = SubResource( 13 )
+[sub_resource type="AnimationNodeBlendSpace2D" id=9]
+blend_point_0/node = SubResource( 5 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 14 )
+blend_point_1/node = SubResource( 6 )
 blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 15 )
+blend_point_2/node = SubResource( 7 )
 blend_point_2/pos = Vector2( 0, -1.1 )
-blend_point_3/node = SubResource( 16 )
+blend_point_3/node = SubResource( 8 )
 blend_point_3/pos = Vector2( 0, 1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeStateMachine" id=18]
-states/move/node = SubResource( 17 )
+[sub_resource type="AnimationNodeStateMachine" id=10]
+states/move/node = SubResource( 9 )
 states/move/position = Vector2( 307, 67 )
 start_node = "move"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=19]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
 [sub_resource type="CircleShape2D" id=12]
 radius = 7.93775
 
 [node name="P1" type="KinematicBody2D"]
+scale = Vector2( 0.199201, 0.192318 )
 script = ExtResource( 2 )
 
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 20
-frame = 1
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sprite"]
 root_node = NodePath("../..")
@@ -124,10 +125,10 @@ __meta__ = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="sprite"]
-tree_root = SubResource( 18 )
+tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 19 )
+parameters/playback = SubResource( 11 )
 parameters/move/blend_position = Vector2( -0.846801, -0.986879 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
