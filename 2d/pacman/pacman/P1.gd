@@ -31,3 +31,9 @@ func _process(delta):
 	else:
 		velocity = velocity.move_toward(inertia_vector * MAX_SPEED, MAX_ACCELERATION * delta)
 		velocity = move_and_slide(velocity)
+
+func _on_rightExit2_body_entered(body):
+	position.x = 0
+
+func _on_leftExit_body_entered(body):
+	position.x = 400

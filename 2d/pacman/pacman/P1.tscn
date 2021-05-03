@@ -112,7 +112,7 @@ script = ExtResource( 2 )
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 20
-frame = 3
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="sprite"]
 root_node = NodePath("../..")
