@@ -18,6 +18,11 @@ config/name="Pacman"
 run/main_scene="res://Level1.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=400
+window/size/height=700
+
 [input]
 
 ui_left={

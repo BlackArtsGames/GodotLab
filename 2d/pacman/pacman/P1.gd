@@ -42,5 +42,6 @@ func _on_leftExit_body_entered(body):
 
 func _on_ball_body_entered(body):
 	points += 1 
+	print(str(points))
 
 

@@ -1,8 +1,14 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://P1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/walls.png" type="Texture" id=2]
 [ext_resource path="res://ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/PressStart2P-vaV7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://UI.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=51]
+size = 8
+font_data = ExtResource( 4 )
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -466,6 +472,46 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 extents = Vector2( 0.959252, 4.02557 )
 
 [node name="Level1" type="Node2D"]
+position = Vector2( -1.57538, 100.588 )
+
+[node name="UI" type="YSort" parent="."]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+margin_left = 1.25992
+margin_top = -100.164
+margin_right = 41.2599
+margin_bottom = -60.1637
+rect_scale = Vector2( 9.99278, 2.54657 )
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="points" type="RichTextLabel" parent="UI"]
+margin_left = 7.92765
+margin_top = -90.7818
+margin_right = 65.0
+margin_bottom = -55.7818
+rect_scale = Vector2( 1.128, 1.87511 )
+custom_fonts/normal_font = SubResource( 51 )
+text = "Points:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="point_marker" type="RichTextLabel" parent="UI"]
+margin_left = 33.3183
+margin_top = -68.0639
+margin_right = 90.3906
+margin_bottom = -33.0639
+rect_scale = Vector2( 3.80327, 9.18949 )
+custom_fonts/normal_font = SubResource( 51 )
+tab_size = 1
+text = "666"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="World" type="YSort" parent="."]
 scale = Vector2( 9.95612, 14.9546 )
@@ -1018,20 +1064,20 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball7" to="World/balls/ball7" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball8" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball8" to="World/balls/ball8" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball9" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball9" to="World/balls/ball9" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball10" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball9" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball10" to="World/balls/ball10" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball12" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball10" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball12" to="World/balls/ball12" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball13" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball12" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball13" to="World/balls/ball13" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball13" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball14" to="World/balls/ball14" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball14" to="P1" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball15" to="World/balls/ball15" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball15" to="P1" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball16" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball15" to="World/balls/ball15" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball16" to="World/balls/ball16" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball16" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball21" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball21" to="World/balls/ball21" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball23" to="P1" method="_on_ball_body_entered"]
@@ -1048,12 +1094,12 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball30" to="World/balls/ball30" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball31" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball31" to="World/balls/ball31" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball38" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball38" to="World/balls/ball38" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball39" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball38" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball39" to="World/balls/ball39" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball40" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball39" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball40" to="World/balls/ball40" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball40" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball41" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball41" to="World/balls/ball41" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball42" to="P1" method="_on_ball_body_entered"]
@@ -1062,8 +1108,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball43" to="World/balls/ball43" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball44" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball44" to="World/balls/ball44" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball45" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball45" to="World/balls/ball45" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball45" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball46" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball46" to="World/balls/ball46" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball47" to="P1" method="_on_ball_body_entered"]
@@ -1094,8 +1140,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball67" to="World/balls/ball67" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball70" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball70" to="World/balls/ball70" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball71" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball71" to="World/balls/ball71" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball71" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball73" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball73" to="World/balls/ball73" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball74" to="P1" method="_on_ball_body_entered"]
@@ -1104,8 +1150,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball75" to="World/balls/ball75" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball76" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball76" to="World/balls/ball76" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball77" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball77" to="World/balls/ball77" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball77" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball78" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball78" to="World/balls/ball78" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball79" to="P1" method="_on_ball_body_entered"]
@@ -1134,16 +1180,16 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball93" to="World/balls/ball93" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball96" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball96" to="World/balls/ball96" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball98" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball98" to="World/balls/ball98" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball98" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball99" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball99" to="World/balls/ball99" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball100" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball100" to="World/balls/ball100" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball106" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball106" to="World/balls/ball106" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball108" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball108" to="World/balls/ball108" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball108" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball110" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball110" to="World/balls/ball110" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball111" to="P1" method="_on_ball_body_entered"]
@@ -1160,8 +1206,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball120" to="World/balls/ball120" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball121" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball121" to="World/balls/ball121" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball122" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball122" to="World/balls/ball122" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball122" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball123" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball123" to="World/balls/ball123" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball124" to="P1" method="_on_ball_body_entered"]
@@ -1172,14 +1218,14 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball126" to="World/balls/ball126" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball127" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball127" to="World/balls/ball127" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball128" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball128" to="World/balls/ball128" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball128" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball129" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball129" to="World/balls/ball129" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball130" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball130" to="World/balls/ball130" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball132" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball130" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball132" to="World/balls/ball132" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball132" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball133" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball133" to="World/balls/ball133" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball134" to="P1" method="_on_ball_body_entered"]
@@ -1190,8 +1236,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball136" to="World/balls/ball136" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball137" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball137" to="World/balls/ball137" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball138" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball138" to="World/balls/ball138" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball138" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball139" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball139" to="World/balls/ball139" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball140" to="P1" method="_on_ball_body_entered"]
@@ -1228,8 +1274,8 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball192" to="World/balls/ball192" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball193" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball193" to="World/balls/ball193" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball194" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball194" to="World/balls/ball194" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball194" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball195" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball195" to="World/balls/ball195" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball196" to="P1" method="_on_ball_body_entered"]
@@ -1244,7 +1290,7 @@ scale = Vector2( 1, 1 )
 [connection signal="body_entered" from="World/balls/ball200" to="World/balls/ball200" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball202" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball202" to="World/balls/ball202" method="_on_ball_body_entered"]
-[connection signal="body_entered" from="World/balls/ball201" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/balls/ball201" to="World/balls/ball201" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball201" to="P1" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/rightExit2" to="P1" method="_on_rightExit2_body_entered"]
 [connection signal="body_entered" from="World/leftExit" to="P1" method="_on_leftExit_body_entered"]
