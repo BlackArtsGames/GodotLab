@@ -6,14 +6,15 @@ const MAX_ACCELERATION = 6000
 
 
 var velocity = Vector2.ZERO
+var inertia_vector = Vector2.ZERO
+var points = 0
+
 onready var animationPlayer = $sprite/AnimationPlayer
 onready var animationTree = $sprite/AnimationTree
-var inertia_vector = Vector2.ZERO
+
 
 func _ready():
 	animationTree.active = true
-	
-	
 
 func _process(delta):
 	var input_vector = Vector2.ZERO
@@ -32,8 +33,14 @@ func _process(delta):
 		velocity = velocity.move_toward(inertia_vector * MAX_SPEED, MAX_ACCELERATION * delta)
 		velocity = move_and_slide(velocity)
 
+
 func _on_rightExit2_body_entered(body):
 	position.x = 0
 
 func _on_leftExit_body_entered(body):
 	position.x = 400
+
+func _on_ball_body_entered(body):
+	points += 1 
+
+

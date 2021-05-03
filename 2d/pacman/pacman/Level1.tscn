@@ -1,7 +1,8 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://P1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/walls.png" type="Texture" id=2]
+[ext_resource path="res://ball.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -466,17 +467,513 @@ extents = Vector2( 0.959252, 4.02557 )
 
 [node name="Level1" type="Node2D"]
 
-[node name="World" type="Node2D" parent="."]
+[node name="World" type="YSort" parent="."]
 scale = Vector2( 9.95612, 14.9546 )
 
 [node name="Background" type="ColorRect" parent="World"]
-margin_right = 129.0
+margin_left = -0.0281854
+margin_top = 1.02073e-06
+margin_right = 128.972
 margin_bottom = 76.0
 rect_scale = Vector2( 0.314952, 0.530598 )
 color = Color( 0, 0.00392157, 0.196078, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="balls" type="YSort" parent="World"]
+
+[node name="ball" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4789, 26.7537 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball2" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4372, 24.6153 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball3" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4466, 22.4665 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball4" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4693, 20.3322 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball5" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.5439, 36.033 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball17" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.5774, 38.1975 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball6" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4121, 33.1798 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball7" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4826, 31.0449 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball8" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.4511, 28.8871 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball9" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.6478, 9.54736 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball10" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.418, 6.85783 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball12" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.6434, 3.63765 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball13" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.618, 18.1008 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball14" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.581, 15.9734 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball15" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.6515, 13.8386 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball16" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 10.62, 11.6807 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball21" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.83116, 20.4613 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball23" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.84444, 38.0425 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball25" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.84444, 31.1739 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball26" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.8129, 29.0161 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball27" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 7.0096, 9.67635 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball28" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.77979, 6.98682 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball30" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 7.99168, 3.57898 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball31" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.97983, 18.2298 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball38" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.02961, 20.503 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball39" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.10416, 36.2037 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball40" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.04288, 38.0842 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball41" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 2.97234, 33.3505 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball42" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.04288, 31.2156 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball43" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.01134, 29.0578 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball44" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.20805, 9.71808 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball45" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 2.97823, 7.02855 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball46" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.00671, 4.7741 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball47" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.03454, 2.25091 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball48" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 3.17828, 18.2715 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball53" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2245, 24.3865 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball54" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2339, 22.2377 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball56" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.3312, 35.8042 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball57" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2699, 38.1581 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball58" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.1994, 32.951 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball59" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2699, 30.8162 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball60" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2384, 28.6583 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball62" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.2053, 6.62901 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball63" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.9296, 4.58046 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball64" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.4632, 2.89707 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball67" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 21.4388, 13.6098 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball70" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.5863, 24.5155 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball71" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.5958, 22.3667 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball73" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.693, 35.9332 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball74" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.6791, 38.1293 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball75" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.5612, 33.08 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball76" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.6317, 30.9451 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball77" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.6002, 28.7873 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball78" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 16.1246, 9.46741 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball79" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.5671, 6.758 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball80" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.9342, 4.45345 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball81" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 6.26477, 2.03665 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball103" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 18.0744, 2.97487 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball84" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 17.8006, 13.7388 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball85" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 16.1865, 11.6008 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball88" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.7942, 22.4084 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball89" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.8169, 20.2742 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball90" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.8914, 35.9749 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball91" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.925, 37.9817 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball92" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.7596, 33.1218 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball93" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.8302, 30.9869 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball96" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.7655, 6.79973 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball98" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.7654, 2.2285 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball99" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.9655, 18.0427 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball100" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 13.8987, 15.6172 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball106" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.5585, 19.9536 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball108" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.6667, 38.0713 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball110" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.5718, 30.6662 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball111" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.5403, 28.5084 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball112" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.737, 9.16867 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball113" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.5071, 6.47914 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball115" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.0126, 3.87433 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball116" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 32.7072, 17.7221 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball120" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.9299, 26.504 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball121" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.8882, 24.3655 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball122" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.8977, 22.2167 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball123" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.9204, 20.0826 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball124" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.9949, 35.7832 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball125" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.0759, 37.9793 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball126" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.8631, 32.9301 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball127" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.9336, 30.7952 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball128" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.9021, 28.6373 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball129" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.0988, 9.29765 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball130" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.869, 6.60812 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball132" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 28.7507, 4.0033 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball133" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.069, 17.8511 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball134" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.032, 15.7237 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball135" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.1026, 13.5889 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball136" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 29.071, 11.431 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball137" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.1283, 26.5457 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball138" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.0866, 24.4073 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball139" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.0961, 22.2585 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball140" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.1188, 20.1243 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball141" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.1934, 35.825 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball142" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 24.9899, 38.1789 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball143" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.0615, 32.9718 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball144" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.1321, 30.8369 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball145" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.1005, 28.6791 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball146" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 24.0729, 9.57794 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball147" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.0674, 6.29919 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball148" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 24.9264, 4.72654 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball149" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 27.8084, 2.09133 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball154" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.363, 2.29171 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball150" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.2675, 17.8928 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball151" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 25.2305, 15.7655 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball153" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 24.0451, 11.5523 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball191" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.9061, 19.8955 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball192" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.9807, 35.5962 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball193" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 36.2038, 38.1078 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball194" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.8488, 32.743 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball195" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.9194, 30.6082 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball196" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.8878, 28.4503 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball197" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 36.0845, 9.11057 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball198" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 35.8547, 6.42104 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball199" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 36.5038, 4.59792 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball200" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 36.4889, 2.13804 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball202" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 33.3286, 1.88756 )
+scale = Vector2( 0.0545171, 0.0386953 )
+
+[node name="ball201" parent="World/balls" instance=ExtResource( 3 )]
+position = Vector2( 36.0547, 17.664 )
+scale = Vector2( 0.0545171, 0.0386953 )
 
 [node name="walls" type="TileMap" parent="World"]
 position = Vector2( -0.00119627, 0.000798643 )
@@ -500,8 +997,254 @@ position = Vector2( -1.88301, 19.5847 )
 shape = SubResource( 50 )
 
 [node name="P1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 362.523, 289.205 )
+position = Vector2( 198.624, 498.478 )
 scale = Vector2( 1, 1 )
 
+[connection signal="body_entered" from="World/balls/ball" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball" to="World/balls/ball" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball2" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball2" to="World/balls/ball2" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball3" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball3" to="World/balls/ball3" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball4" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball4" to="World/balls/ball4" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball5" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball5" to="World/balls/ball5" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball17" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball17" to="World/balls/ball17" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball6" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball6" to="World/balls/ball6" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball7" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball7" to="World/balls/ball7" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball8" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball8" to="World/balls/ball8" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball9" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball9" to="World/balls/ball9" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball10" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball10" to="World/balls/ball10" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball12" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball12" to="World/balls/ball12" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball13" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball13" to="World/balls/ball13" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball14" to="World/balls/ball14" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball14" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball15" to="World/balls/ball15" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball15" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball16" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball16" to="World/balls/ball16" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball21" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball21" to="World/balls/ball21" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball23" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball23" to="World/balls/ball23" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball25" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball25" to="World/balls/ball25" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball26" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball26" to="World/balls/ball26" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball27" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball27" to="World/balls/ball27" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball28" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball28" to="World/balls/ball28" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball30" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball30" to="World/balls/ball30" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball31" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball31" to="World/balls/ball31" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball38" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball38" to="World/balls/ball38" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball39" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball39" to="World/balls/ball39" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball40" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball40" to="World/balls/ball40" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball41" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball41" to="World/balls/ball41" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball42" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball42" to="World/balls/ball42" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball43" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball43" to="World/balls/ball43" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball44" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball44" to="World/balls/ball44" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball45" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball45" to="World/balls/ball45" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball46" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball46" to="World/balls/ball46" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball47" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball47" to="World/balls/ball47" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball48" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball48" to="World/balls/ball48" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball53" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball53" to="World/balls/ball53" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball54" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball54" to="World/balls/ball54" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball56" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball56" to="World/balls/ball56" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball57" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball57" to="World/balls/ball57" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball58" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball58" to="World/balls/ball58" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball59" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball59" to="World/balls/ball59" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball60" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball60" to="World/balls/ball60" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball62" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball62" to="World/balls/ball62" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball63" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball63" to="World/balls/ball63" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball64" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball64" to="World/balls/ball64" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball67" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball67" to="World/balls/ball67" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball70" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball70" to="World/balls/ball70" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball71" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball71" to="World/balls/ball71" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball73" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball73" to="World/balls/ball73" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball74" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball74" to="World/balls/ball74" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball75" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball75" to="World/balls/ball75" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball76" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball76" to="World/balls/ball76" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball77" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball77" to="World/balls/ball77" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball78" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball78" to="World/balls/ball78" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball79" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball79" to="World/balls/ball79" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball80" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball80" to="World/balls/ball80" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball81" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball81" to="World/balls/ball81" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball103" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball103" to="World/balls/ball103" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball84" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball84" to="World/balls/ball84" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball85" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball85" to="World/balls/ball85" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball88" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball88" to="World/balls/ball88" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball89" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball89" to="World/balls/ball89" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball90" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball90" to="World/balls/ball90" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball91" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball91" to="World/balls/ball91" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball92" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball92" to="World/balls/ball92" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball93" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball93" to="World/balls/ball93" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball96" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball96" to="World/balls/ball96" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball98" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball98" to="World/balls/ball98" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball99" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball99" to="World/balls/ball99" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball100" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball100" to="World/balls/ball100" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball106" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball106" to="World/balls/ball106" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball108" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball108" to="World/balls/ball108" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball110" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball110" to="World/balls/ball110" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball111" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball111" to="World/balls/ball111" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball112" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball112" to="World/balls/ball112" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball113" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball113" to="World/balls/ball113" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball115" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball115" to="World/balls/ball115" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball116" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball116" to="World/balls/ball116" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball120" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball120" to="World/balls/ball120" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball121" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball121" to="World/balls/ball121" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball122" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball122" to="World/balls/ball122" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball123" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball123" to="World/balls/ball123" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball124" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball124" to="World/balls/ball124" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball125" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball125" to="World/balls/ball125" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball126" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball126" to="World/balls/ball126" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball127" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball127" to="World/balls/ball127" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball128" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball128" to="World/balls/ball128" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball129" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball129" to="World/balls/ball129" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball130" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball130" to="World/balls/ball130" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball132" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball132" to="World/balls/ball132" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball133" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball133" to="World/balls/ball133" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball134" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball134" to="World/balls/ball134" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball135" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball135" to="World/balls/ball135" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball136" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball136" to="World/balls/ball136" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball137" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball137" to="World/balls/ball137" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball138" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball138" to="World/balls/ball138" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball139" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball139" to="World/balls/ball139" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball140" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball140" to="World/balls/ball140" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball141" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball141" to="World/balls/ball141" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball142" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball142" to="World/balls/ball142" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball143" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball143" to="World/balls/ball143" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball144" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball144" to="World/balls/ball144" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball145" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball145" to="World/balls/ball145" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball146" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball146" to="World/balls/ball146" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball147" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball147" to="World/balls/ball147" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball148" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball148" to="World/balls/ball148" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball149" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball149" to="World/balls/ball149" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball154" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball154" to="World/balls/ball154" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball150" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball150" to="World/balls/ball150" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball151" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball151" to="World/balls/ball151" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball153" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball153" to="World/balls/ball153" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball191" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball191" to="World/balls/ball191" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball192" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball192" to="World/balls/ball192" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball193" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball193" to="World/balls/ball193" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball194" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball194" to="World/balls/ball194" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball195" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball195" to="World/balls/ball195" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball196" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball196" to="World/balls/ball196" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball197" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball197" to="World/balls/ball197" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball198" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball198" to="World/balls/ball198" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball199" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball199" to="World/balls/ball199" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball200" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball200" to="World/balls/ball200" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball202" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball202" to="World/balls/ball202" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball201" to="P1" method="_on_ball_body_entered"]
+[connection signal="body_entered" from="World/balls/ball201" to="World/balls/ball201" method="_on_ball_body_entered"]
 [connection signal="body_entered" from="World/rightExit2" to="P1" method="_on_rightExit2_body_entered"]
 [connection signal="body_entered" from="World/leftExit" to="P1" method="_on_leftExit_body_entered"]
