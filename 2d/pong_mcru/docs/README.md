@@ -3,7 +3,7 @@
 This is the classic Pong game, with sober colors and layout, 
 but with a little extended behaviour
 
-![Main Game](./assets/main_game.png)
+![Main Game](../assets/main_game.png)
 
 ## Characteristics
 
@@ -19,7 +19,7 @@ distribution in cos(theta), where theta is the 360 degrees arch.
 They don't have flat colission with the ball, because their 
 collision shape are pentagons like this
 
-![Collision Polygon](./assets/collision_polygon.png)
+![Collision Polygon](../assets/collision_polygon.png)
 
 and the direction of the ball will be affected after such collision.
 
